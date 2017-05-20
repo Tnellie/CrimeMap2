@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrimeMap2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7up-MV-DFW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Rockford Crime Map" id="oLe-7n-bi7"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-r7-js3">
+                                <rect key="frame" x="0.0" y="44" width="375" height="572"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 24 Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRj-SI-hXU">
+                                <rect key="frame" x="0.0" y="618" width="375" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-4w-iMY">
+                                <rect key="frame" x="233" y="619" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="zIt-aq-74h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-Qg-Iun">
+                                <rect key="frame" x="-2" y="637" width="379" height="31"/>
+                                <connections>
+                                    <action selector="DateSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="yzM-zr-jIG"/>
+                                    <action selector="DateSliderUp:" destination="BYZ-38-t0r" eventType="valueChanged" id="GoO-p6-Gnm"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7up-MV-DFW" firstAttribute="trailing" secondItem="ORC-r7-js3" secondAttribute="trailing" id="2w4-i4-Vwv"/>
+                            <constraint firstItem="IRj-SI-hXU" firstAttribute="centerY" secondItem="Y89-4w-iMY" secondAttribute="centerY" id="3Gf-cP-53X"/>
+                            <constraint firstItem="ORC-r7-js3" firstAttribute="trailing" secondItem="IRj-SI-hXU" secondAttribute="trailing" id="4d1-PT-ejZ"/>
+                            <constraint firstItem="7up-MV-DFW" firstAttribute="leading" secondItem="ORC-r7-js3" secondAttribute="leading" id="6KA-b7-lGe"/>
+                            <constraint firstAttribute="trailing" secondItem="7up-MV-DFW" secondAttribute="trailing" id="6o1-uX-AQb"/>
+                            <constraint firstItem="7up-MV-DFW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6qg-pN-Q9U"/>
+                            <constraint firstItem="IRj-SI-hXU" firstAttribute="top" secondItem="ORC-r7-js3" secondAttribute="bottom" constant="2" id="8ii-N6-3Jt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y89-4w-iMY" secondAttribute="trailing" constant="31" id="Bg1-Nq-Xba"/>
+                            <constraint firstItem="7up-MV-DFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EOr-Iy-sOp"/>
+                            <constraint firstItem="ORC-r7-js3" firstAttribute="leading" secondItem="IRj-SI-hXU" secondAttribute="leading" id="NxD-Ny-ndn"/>
+                            <constraint firstItem="Y89-4w-iMY" firstAttribute="top" secondItem="ORC-r7-js3" secondAttribute="bottom" constant="3" id="Of5-gB-TTS"/>
+                            <constraint firstItem="ORC-r7-js3" firstAttribute="top" secondItem="7up-MV-DFW" secondAttribute="bottom" id="RmG-AQ-zoX"/>
+                            <constraint firstItem="pgc-Qg-Iun" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ZSk-XO-QdD"/>
+                            <constraint firstItem="IRj-SI-hXU" firstAttribute="trailing" secondItem="pgc-Qg-Iun" secondAttribute="trailing" id="bAv-XZ-weQ"/>
+                            <constraint firstItem="pgc-Qg-Iun" firstAttribute="top" secondItem="ORC-r7-js3" secondAttribute="bottom" constant="21" id="nHW-U4-UTq"/>
+                            <constraint firstItem="IRj-SI-hXU" firstAttribute="leading" secondItem="pgc-Qg-Iun" secondAttribute="leading" id="vNv-nt-cLc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblCrimeRange" destination="IRj-SI-hXU" id="DCQ-PD-g0g"/>
+                        <outlet property="lblcount" destination="Y89-4w-iMY" id="FYH-Nv-Iv5"/>
+                        <outlet property="mapView" destination="ORC-r7-js3" id="xBf-zJ-Wd5"/>
+                        <outlet property="navigationBar" destination="7up-MV-DFW" id="jGY-Ez-05O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="94"/>
+        </scene>
+    </scenes>
+</document>
